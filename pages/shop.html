@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop — Scentora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <header class="navbar">
+      <div class="navbar__container">
+        <a href="../index.html" class="navbar__logo">Scentora</a>
+
+        <nav class="navbar__links" id="navLinks">
+          <a href="../index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+
+        <div class="navbar__actions">
+          <a href="cart.html" class="cart-icon">
+            🛒 <span id="cartCount">0</span>
+          </a>
+          <button
+            class="navbar__toggle"
+            id="navToggle"
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- SHOP HEADER -->
+    <section class="shop-header">
+      <h1>Our Collection</h1>
+      <p>Explore every fragrance we carry.</p>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="shop-filters">
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search fragrances or categories..."
+        />
+      </div>
+
+      <div class="category-filters" id="categoryFilters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="Oud">Oud</button>
+        <button class="filter-btn" data-category="Floral">Floral</button>
+        <button class="filter-btn" data-category="Fresh">Fresh</button>
+        <button class="filter-btn" data-category="Woody">Woody</button>
+        <button class="filter-btn" data-category="Sweet">Sweet</button>
+        <button class="filter-btn" data-category="Musk">Musk</button>
+        <button class="filter-btn" data-category="Unisex">Unisex</button>
+      </div>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section class="shop-products">
+      <div class="product-grid" id="shopProducts">
+        <!-- Filled dynamically -->
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2026 Scentora. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="../js/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/ui.js"></script>
+  </body>
+</html>

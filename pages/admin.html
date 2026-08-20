@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin — Scentora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body class="admin-body">
+    <!-- LOGIN VIEW -->
+    <section class="admin-login" id="adminLoginView">
+      <div class="admin-login__card">
+        <a href="../index.html" class="admin-login__logo">Scentora</a>
+        <p class="admin-login__subtitle">Admin Dashboard</p>
+
+        <form id="loginForm" class="admin-login__form">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input
+              type="email"
+              id="loginEmail"
+              name="email"
+              autocomplete="username"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input
+              type="password"
+              id="loginPassword"
+              name="password"
+              autocomplete="current-password"
+              required
+              placeholder="••••••••"
+            />
+          </div>
+
+          <p class="admin-login__error" id="loginError"></p>
+
+          <button
+            type="submit"
+            class="btn btn--primary admin-login__submit"
+            id="loginSubmitBtn"
+          >
+            Log In
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- DASHBOARD VIEW (hidden until logged in) -->
+    <div id="adminDashboardView" class="admin-dashboard" style="display: none">
+      <!-- Sidebar / topbar -->
+      <header class="admin-topbar">
+        <a href="../index.html" class="admin-topbar__logo"
+          >Scentora <span>Admin</span></a
+        >
+        <button id="logoutBtn" class="admin-topbar__logout">Log Out</button>
+      </header>
+
+      <main class="admin-main" id="adminMain">
+        <p class="loading-text">Loading dashboard...</p>
+      </main>
+  
+      <!-- ADD/EDIT PRODUCT MODAL -->
+      <div class="modal-overlay" id="productModalOverlay">
+        <div class="modal">
+          <div class="modal__header">
+            <h2 id="modalTitle">Add New Product</h2>
+            <button class="modal__close" id="modalCloseBtn">&times;</button>
+          </div>
+  
+          <form id="productForm" class="modal__form">
+            <div class="form-group">
+              <label for="productName">Product Name</label>
+              <input type="text" id="productName" required placeholder="e.g. Oud Royale">
+            </div>
+  
+            <div class="form-row">
+              <div class="form-group">
+                <label for="productPrice">Price (₦)</label>
+                <input type="number" id="productPrice" required min="0" step="1" placeholder="45000">
+              </div>
+              <div class="form-group">
+                <label for="productSize">Size</label>
+                <input type="text" id="productSize" required placeholder="50ml">
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="productCategory">Category</label>
+              <select id="productCategory" required>
+                <option value="">Select category</option>
+                <option value="Oud">Oud</option>
+                <option value="Floral">Floral</option>
+                <option value="Fresh">Fresh</option>
+                <option value="Woody">Woody</option>
+                <option value="Sweet">Sweet</option>
+                <option value="Musk">Musk</option>
+                <option value="Unisex">Unisex</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <label for="productDescription">Description</label>
+              <textarea id="productDescription" rows="3" placeholder="Short description of the fragrance..."></textarea>
+            </div>
+  
+            <div class="form-group">
+              <label for="productImage">Product Image</label>
+              <input type="file" id="productImage" accept="image/png, image/jpeg, image/webp">
+              <img id="imagePreview" class="image-preview" style="display: none;">
+            </div>
+  
+            <div class="form-row form-row--checkboxes">
+              <label class="checkbox-label">
+                <input type="checkbox" id="productAvailable" checked>
+                Available
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="productFeatured">
+                Featured
+              </label>
+            </div>
+  
+            <p class="modal__error" id="formError"></p>
+  
+            <button type="submit" class="btn btn--primary modal__submit" id="formSubmitBtn">
+              Publish Product
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="../js/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart — Scentora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <header class="navbar">
+      <div class="navbar__container">
+        <a href="../index.html" class="navbar__logo">Scentora</a>
+
+        <nav class="navbar__links" id="navLinks">
+          <a href="../index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+
+        <div class="navbar__actions">
+          <a href="cart.html" class="cart-icon">
+            🛒 <span id="cartCount">0</span>
+          </a>
+          <button
+            class="navbar__toggle"
+            id="navToggle"
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CART PAGE -->
+    <section class="cart-page">
+      <h1>Your Cart</h1>
+      <div id="cartContent">
+        <!-- Filled dynamically -->
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2026 Scentora. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="../js/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/whatsapp.js"></script>
+    <script src="../js/ui.js"></script>
+  </body>
+</html>

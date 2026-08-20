@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scentora — Fragrances That Feel Like You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <header class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" class="navbar__logo">Scentora</a>
+
+        <nav class="navbar__links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="pages/shop.html">Shop</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="navbar__actions">
+          <a href="pages/cart.html" class="cart-icon">
+            🛒 <span id="cartCount">0</span>
+          </a>
+          <button
+            class="navbar__toggle"
+            id="navToggle"
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Find a Fragrance<br />That Feels Like You.</h1>
+        <p>
+          Discover a curated collection of premium scents — crafted for those
+          who don't follow trends, they set them.
+        </p>
+        <div class="hero__buttons">
+          <a href="pages/shop.html" class="btn btn--primary">Shop Now</a>
+          <a href="#featured" class="btn btn--outline">View Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar reveal">
+      <div class="stats-bar__item">
+        <h3>2,000+</h3>
+        <p>Happy Customers</p>
+      </div>
+      <div class="stats-bar__item">
+        <h3>50+</h3>
+        <p>Fragrances</p>
+      </div>
+      <div class="stats-bar__item">
+        <h3>100%</h3>
+        <p>Authentic</p>
+      </div>
+      <div class="stats-bar__item">
+        <h3>24/7</h3>
+        <p>WhatsApp Support</p>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="featured" id="featured">
+      <div class="section-header reveal">
+        <h2>Featured Fragrances</h2>
+        <p>Our most-loved scents, handpicked for you.</p>
+      </div>
+      <div class="product-grid" id="featured-products">
+        <!-- Filled in dynamically by products.js -->
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+      <div class="section-header reveal">
+        <h2>Shop By Category</h2>
+        <p>Every scent tells a different story.</p>
+      </div>
+      <div class="category-grid">
+        <div
+          class="category-card reveal"
+          onclick="location.href='pages/shop.html?category=Oud'"
+        >
+          <h3>Oud</h3>
+        </div>
+        <div
+          class="category-card reveal reveal--delay-1"
+          onclick="location.href='pages/shop.html?category=Floral'"
+        >
+          <h3>Floral</h3>
+        </div>
+        <div
+          class="category-card reveal reveal--delay-2"
+          onclick="location.href='pages/shop.html?category=Fresh'"
+        >
+          <h3>Fresh</h3>
+        </div>
+        <div
+          class="category-card reveal reveal--delay-3"
+          onclick="location.href='pages/shop.html?category=Woody'"
+        >
+          <h3>Woody</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY SCENTORA -->
+    <section class="why-us">
+      <div class="section-header reveal">
+        <h2>Why Scentora</h2>
+      </div>
+      <div class="why-us__grid">
+        <div class="why-us__item reveal">
+          <span>✅</span>
+          <h3>100% Authentic</h3>
+          <p>
+            Every fragrance is sourced and verified for quality — no
+            compromises.
+          </p>
+        </div>
+        <div class="why-us__item reveal reveal--delay-1">
+          <span>🚚</span>
+          <h3>Fast Delivery</h3>
+          <p>Quick, reliable delivery across Lagos and beyond.</p>
+        </div>
+        <div class="why-us__item reveal reveal--delay-2">
+          <span>💬</span>
+          <h3>Personal Support</h3>
+          <p>Order directly via WhatsApp — real replies, no bots.</p>
+        </div>
+        <div class="why-us__item reveal reveal--delay-3">
+          <span>🎁</span>
+          <h3>Gift-Ready</h3>
+          <p>Every order arrives beautifully packaged, ready to gift.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about__content">
+        <h2>About Scentora</h2>
+        <p>
+          Scentora was born from a simple belief — fragrance is identity. Every
+          scent in our collection is chosen to help you express who you are,
+          without saying a word. From bold ouds to soft florals, we bring
+          premium fragrances to everyone.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="contact__content">
+        <h2>Get In Touch</h2>
+        <p>
+          Have a question about a fragrance? Reach out — we usually reply within
+          a few hours.
+        </p>
+        <a href="#" class="btn btn--primary" id="whatsappContact"
+          >Chat on WhatsApp</a
+        >
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="instagram-strip reveal">
+      <h2>Follow Us @arab.money__</h2>
+      <p>See our latest drops and behind-the-scenes on Instagram.</p>
+      <div class="instagram-strip__grid">
+        <img
+          src="https://placehold.co/400x400/2B211B/F5F1EB?text=Scentora"
+          alt="Instagram post"
+        />
+        <img
+          src="https://placehold.co/400x400/B5654A/F5F1EB?text=Scentora"
+          alt="Instagram post"
+        />
+        <img
+          src="https://placehold.co/400x400/5C534C/F5F1EB?text=Scentora"
+          alt="Instagram post"
+        />
+        <img
+          src="https://placehold.co/400x400/2B211B/F5F1EB?text=Scentora"
+          alt="Instagram post"
+        />
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2026 Scentora. All rights reserved.</p>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>
