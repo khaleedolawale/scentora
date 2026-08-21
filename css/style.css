@@ -263,6 +263,81 @@ a {
 }
 
 /* ============================================
+   CONTACT FORM
+   ============================================ */
+.contact-form {
+  max-width: 450px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.optional-tag {
+  font-weight: 400;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.contact-form__error {
+  color: #ff8a75;
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  min-height: 1.2em;
+}
+
+.contact-form__submit-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-form__submit {
+  border: none;
+  cursor: pointer;
+  padding: 0.7rem 1.6rem;
+  font-size: 0.9rem;
+}
+
+.contact-alt {
+  background-color: #2b211b;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+  position: relative;
+}
+
+.contact-alt__label {
+  font-size: 0.85rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.contact .btn--outline {
+  /* background-color: #ece5da; */
+  border-color: rgba(255, 255, 255, 0.4);
+  /* color: green; */
+  /* top: -90px; */
+}
+
+.contact .btn--outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+.contact .btn--outline {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.contact .btn--outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+/* ============================================
      FOOTER
      ============================================ */
 .footer {

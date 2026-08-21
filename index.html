@@ -170,12 +170,58 @@
       <div class="contact__content">
         <h2>Get In Touch</h2>
         <p>
-          Have a question about a fragrance? Reach out — we usually reply within
-          a few hours.
+          Have a question, need a bulk order, or want to ask about something not
+          listed? Reach out — we usually reply within a few hours.
         </p>
-        <a href="#" class="btn btn--primary" id="whatsappContact"
-          >Chat on WhatsApp</a
-        >
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="contactName">Your Name</label>
+            <input
+              type="text"
+              id="contactName"
+              required
+              placeholder="e.g. Chioma"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="contactPhone"
+              >WhatsApp Number
+              <span class="optional-tag">(optional)</span></label
+            >
+            <input
+              type="tel"
+              id="contactPhone"
+              placeholder="e.g. 08031234567"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Your Message</label>
+            <textarea
+              id="contactMessage"
+              rows="4"
+              required
+              placeholder="Ask about a fragrance, request a bulk order, or anything else..."
+            ></textarea>
+          </div>
+
+          <p class="contact-form__error" id="contactFormError"></p>
+
+          <div class="contact-form__submit-row">
+            <button type="submit" class="btn btn--primary contact-form__submit">
+              Send via WhatsApp
+            </button>
+          </div>
+        </form>
+
+        <div class="contact-alt">
+          <p class="contact-alt__label">Prefer to skip the form?</p>
+          <a href="#" class="btn btn--outline" id="whatsappContact"
+            >Chat Directly on WhatsApp</a
+          >
+        </div>
       </div>
     </section>
 
@@ -219,6 +265,7 @@
     <script src="js/supabase.js"></script>
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/whatsapp.js"></script>
     <script src="js/ui.js"></script>
   </body>
 </html>
