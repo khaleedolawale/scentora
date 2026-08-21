@@ -4,6 +4,28 @@ A fully functional, mobile-first perfume e-commerce demo built with vanilla HTML
 
 🔗 **Live Demo:** [scentorae.netlify.app](https://scentorae.netlify.app)
 
+## 📸 Screenshots
+
+### Customer Experience
+
+| Homepage | Shop |
+|---|---|
+| ![Homepage](screenshots/homepage.png) | ![Shop](screenshots/shop-page.png) |
+
+| Product Details | Shopping Cart |
+|---|---|
+| ![Product](screenshots/product-detail-page.png) | ![Cart](screenshots/cart-page.png) |
+
+### Admin Dashboard
+
+| Dashboard | Add/Edit Product |
+|---|---|
+| ![Dashboard](screenshots/admin-dashboard-page.png) | ![Add/Edit Product](screenshots/add-edit-product-modal-page.png) |
+
+### Checkout
+
+![WhatsApp Checkout](screenshots/whatsapp-message-page.png)
+
 ## Features
 
 ### Customer Experience
