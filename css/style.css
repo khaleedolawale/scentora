@@ -374,12 +374,48 @@ a {
   aspect-ratio: 4 / 5;
   border-radius: 8px;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-dark), #4a3a2e);
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
   cursor: pointer;
   transition: transform 0.3s ease;
+}
+
+/* Dark gradient overlay so text stays readable over any image */
+.category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(43, 33, 27, 0.1) 0%,
+    rgba(43, 33, 27, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.category-card h3 {
+  position: relative;
+  z-index: 2; /* sits above the overlay */
+}
+
+/* Placeholder images per category — swap these URLs for real photos later */
+.category-card--oud {
+  background-image: url("https://mansolid.com/cdn/shop/articles/oud-in-perfume-a-royal-note-of-power-and-depth-5264853.webp?v=1785939493");
+}
+
+.category-card--floral {
+  background-image: url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&q=80");
+}
+
+.category-card--fresh {
+  background-image: url("https://albait-aldimashqi.com/wp-content/uploads/2025/11/azure-breeze.webp");
+}
+
+.category-card--woody {
+  background-image: url("https://perfumedom.com/wp-content/uploads/2020/02/woody-fragrance-oils.jpg");
 }
 
 .category-card:hover {
